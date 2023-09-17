@@ -1,20 +1,17 @@
 # Test main.py
 
-from main import car
+import main
 
 
-def test_car():
-    GDP_data = {
-        "year": [2021, 2022, 2023],
-        "GDP rate": [2.8, 3.1, 3.0],
-        "GDP": ["1.637M", "1.73M", "1.83M"],
-    }
+def test_calculate_stat():
+    calculate_stat()
 
-    result = GDP(GDP_data)
 
-    max_value = max(result["GDP rate"])
-    assert max_value == 3.1
+def test_count_row():
+    num_row = main.count_row()
+    assert num_row == 15723
 
 
 if __name__ == "__main__":
-    test_GDP()
+    test_count_col()
+    test_count_row()

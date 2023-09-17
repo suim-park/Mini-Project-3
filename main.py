@@ -3,33 +3,21 @@
 import polars as pl
 import matplotlib.pyplot as plt
 
-stat_df = pl.read_csv("Statistics_Test.csv")
+auto_df = pl.read_csv("Auto.csv", ignore_errors=True)
+print(auto_df)
 
 
-# Mean, Median, Standard Deviation
-def people():
-    age = stat_df["AGE"]
-    age_mean = age.mean()
-    age_median = age.median()
-    age_std = age.std()
-    print(f"Mean = {age_mean}, Median = {age_median}, Standard Deviation = {age_std}")
-    return
+# Calculate mean, median, standard deviation of each columns
+def calculate_stat():
+    auto_desc = auto_df.describe()
+    print(auto_desc)
 
 
-# Count columns for test
-def count_col():
-    num_col = len(stat_df.columns)
-    return num_col
+calculate_stat()
 
 
-# Count rows for test
-def count_row():
-    num_row = len(stat_df)
-    return num_row
-
-
-# Make a plot to Histogram of Age column
-def create_hist():
+# Make a boxplot of columns in Auto.csv
+def build_boxplot():
     plt.hist(stat_df["AGE"], bins=10, color="blue", edgecolor="white")
     plt.xlabel("AGE")
     plt.ylabel("Frequency")
