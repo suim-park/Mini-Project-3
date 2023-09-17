@@ -103,5 +103,5 @@ __`Step 4`__ : Check whether GitHub Action is working correctly for Linting, Tes
 <img src="https://github.com/nogibjj/Suim-Park-Mini-Project-2/assets/143478016/99e24b49-b970-4249-b986-3034100e31cd.png" width="250" height="130"/></br>
 --------------------------------
 #### :ballot_box_with_check: Summary
-  : The results of the statistical analysis of the 'penguins.csv' data and the information about the 'bill_length_mm' histogram can be found in the following summary. I created the summary using Markdown in a Jupyter Notebook, and you can access it by clicking **[here](https://github.com/nogibjj/Suim-Park-Mini-Project-2/blob/main/Summary.md)**.</br></br>
+  : The results of the statistical analysis of the 'penguins.csv' data and the information about the 'bill_length_mm' histogram can be found in the following summary. I created the summary using Markdown in a Jupyter Notebook, and you can access it by clicking **[here](https://github.com/suim-park/Mini-Project-3/blob/main/Summary.pdf)**.</br></br>
   :exclamation: ***Click on the link to go directly to the Summary.pdf***
