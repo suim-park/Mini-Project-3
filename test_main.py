@@ -1,6 +1,6 @@
 # Test main.py
 
-import main
+from main import calculate_stat, build_histogram
 
 
 def test_calculate_stat():
