@@ -3,8 +3,8 @@
 import polars as pl
 import matplotlib.pyplot as plt
 
-auto_df = pl.read_csv("Auto.csv", ignore_errors=True)
-print(auto_df)
+penguins_df = pl.read_csv("penguins.csv", ignore_errors=True)
+print(penguins_df)
 
 
 # Calculate mean, median, standard deviation of each columns
