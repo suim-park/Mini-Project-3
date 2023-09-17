@@ -3,29 +3,28 @@
 import polars as pl
 import matplotlib.pyplot as plt
 
-penguins_df = pl.read_csv("penguins.csv", ignore_errors=True)
+penguins_df = pl.read_csv("penguins.csv")
 print(penguins_df)
 
 
 # Calculate mean, median, standard deviation of each columns
 def calculate_stat():
-    auto_desc = auto_df.describe()
-    print(auto_desc)
+    penguins_desc = penguins_df.describe()
+    print(penguins_desc)
 
 
 calculate_stat()
 
 
-# Make a boxplot of columns in Auto.csv
-def build_boxplot():
-    plt.hist(stat_df["AGE"], bins=10, color="blue", edgecolor="white")
-    plt.xlabel("AGE")
+# Make a histogram of 'bill_length_mm' column in penguins.csv
+def build_histogram():
+    plt.hist(penguins_df["bill_length_mm"], bins=20, color="green", edgecolor="white")
+    plt.xlabel("bill_length_mm")
     plt.ylabel("Frequency")
-    plt.title("Age Histogram")
-    plt.savefig("age_hist.png")
+    plt.title("Bill Length Histogram")
+    plt.savefig("bill_length_hist.png")
     plt.show()
     return
 
 
-people()
-create_hist()
+build_histogram()
